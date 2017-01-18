@@ -1,10 +1,18 @@
-#install apche package
+#
+#Cookbook Name :apache
+#Recipe:: Default
+#
+#CopyRight (c) 
+#install apache package
+
 package 'apache2' do
-	package name 'https'
+	package_name 'httpd'
 	action :install
 end
+
 service 'apache2' do
-	service_name 'https'
+	service_name 'httpd'
 	action [:start, :enable]
 end
+
 
